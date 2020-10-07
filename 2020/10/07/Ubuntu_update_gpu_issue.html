@@ -151,6 +151,7 @@ window.onload = wrap_img;
 <li>The other reason is that its just a super dope tool and every developer that uses remote machines must learn it IMO.</li>
 </ul>
 </li>
+<li>Thats it actually</li>
 </ul>
 
 </div>
@@ -184,9 +185,14 @@ An internet search led me to this link: <a href="https://askubuntu.com/questions
 </ol>
 <h3 id="Fix">Fix<a class="anchor-link" href="#Fix"> </a></h3><ol>
 <li>Turned out, I just had to install the latest driver :). So lets do that</li>
-<li>Run <code>ubuntu-drivers devices</code> to find which drivers you need. It will say "recommended" next to the one it recommends </li>
-<li></li>
+<li><p>Run <code>ubuntu-drivers devices</code> to find which drivers you need. It will say "recommended" next to the one it recommends <img src="fastcore_imgs/2020-10-07-Ubuntu_update_gpu_issue/ubuntu-drivers-out.png" alt="" /></p>
+</li>
+<li><p>Install the recommended driver like <code>sudo apt install nvidia-driver-450</code></p>
+</li>
+<li><p>Run <code>sudo reboot</code> and finally check your <code>nvidia-smi</code> output again :)</p>
+</li>
 </ol>
+<p><img src="/budr_blog/images/copied_from_nb/fastcore_imgs/2020-10-07-Ubuntu_update_gpu_issue/nvidia-smi-out.png" alt="" /></p>
 
 </div>
 </div>
