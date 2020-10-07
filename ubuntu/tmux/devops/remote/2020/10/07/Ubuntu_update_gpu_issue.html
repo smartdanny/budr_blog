@@ -8,15 +8,16 @@
 <meta name="generator" content="Jekyll v4.1.1" />
 <meta property="og:title" content="GPU Issue when upgrading to Ubuntu 20.04" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
-<meta property="og:description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
-<link rel="canonical" href="https://smartdanny.github.io/budr_blog/2020/10/07/Ubuntu_update_gpu_issue.html" />
-<meta property="og:url" content="https://smartdanny.github.io/budr_blog/2020/10/07/Ubuntu_update_gpu_issue.html" />
+<meta name="description" content="So I just updated my (very) remote server from ubuntu 18 to 20 and the process went fairly smooth (except for Nvidia GPU stuff)." />
+<meta property="og:description" content="So I just updated my (very) remote server from ubuntu 18 to 20 and the process went fairly smooth (except for Nvidia GPU stuff)." />
+<link rel="canonical" href="https://smartdanny.github.io/budr_blog/ubuntu/tmux/devops/remote/2020/10/07/Ubuntu_update_gpu_issue.html" />
+<meta property="og:url" content="https://smartdanny.github.io/budr_blog/ubuntu/tmux/devops/remote/2020/10/07/Ubuntu_update_gpu_issue.html" />
 <meta property="og:site_name" content="fastpages" />
+<meta property="og:image" content="https://smartdanny.github.io/budr_blog/images/chart-preview.png" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-10-07T00:00:00-05:00" />
 <script type="application/ld+json">
-{"description":"An easy to use blogging platform with support for Jupyter Notebooks.","url":"https://smartdanny.github.io/budr_blog/2020/10/07/Ubuntu_update_gpu_issue.html","@type":"BlogPosting","headline":"GPU Issue when upgrading to Ubuntu 20.04","dateModified":"2020-10-07T00:00:00-05:00","datePublished":"2020-10-07T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://smartdanny.github.io/budr_blog/2020/10/07/Ubuntu_update_gpu_issue.html"},"@context":"https://schema.org"}</script>
+{"description":"So I just updated my (very) remote server from ubuntu 18 to 20 and the process went fairly smooth (except for Nvidia GPU stuff).","url":"https://smartdanny.github.io/budr_blog/ubuntu/tmux/devops/remote/2020/10/07/Ubuntu_update_gpu_issue.html","@type":"BlogPosting","headline":"GPU Issue when upgrading to Ubuntu 20.04","dateModified":"2020-10-07T00:00:00-05:00","datePublished":"2020-10-07T00:00:00-05:00","image":"https://smartdanny.github.io/budr_blog/images/chart-preview.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://smartdanny.github.io/budr_blog/ubuntu/tmux/devops/remote/2020/10/07/Ubuntu_update_gpu_issue.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/budr_blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://smartdanny.github.io/budr_blog/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/budr_blog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -71,7 +72,7 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">GPU Issue when upgrading to Ubuntu 20.04</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-10-07T00:00:00-05:00" itemprop="datePublished">
+    <h1 class="post-title p-name" itemprop="name headline">GPU Issue when upgrading to Ubuntu 20.04</h1><p class="page-description">So I just updated my (very) remote server from ubuntu 18 to 20 and the process went fairly smooth (except for Nvidia GPU stuff).</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-10-07T00:00:00-05:00" itemprop="datePublished">
         Oct 7, 2020
       </time>
        • <span class="read-time" title="Estimated read time">
@@ -82,33 +83,36 @@ window.onload = wrap_img;
 </span></p>
 
     
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/budr_blog/categories/#Ubuntu">Ubuntu</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/budr_blog/categories/#tmux">tmux</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/budr_blog/categories/#devops">devops</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/budr_blog/categories/#remote">remote</a>
+        
+      
+      </p>
+    
 
     
-      
-        <div class="pb-5 d-flex flex-wrap flex-justify-end">
-          <div class="px-2">
-
-    <a href="https://github.com/smartdanny/budr_blog/tree/master/_notebooks/2020-10-07-Ubuntu_update_gpu_issue.ipynb" role="button" target="_blank">
-<img class="notebook-badge-image" src="/budr_blog/assets/badges/github.svg" alt="View On GitHub">
-    </a>
-</div>
-
-          <div class="px-2">
-    <a href="https://mybinder.org/v2/gh/smartdanny/budr_blog/master?filepath=_notebooks%2F2020-10-07-Ubuntu_update_gpu_issue.ipynb" target="_blank">
-        <img class="notebook-badge-image" src="/budr_blog/assets/badges/binder.svg" alt="Open In Binder"/>
-    </a>
-</div>
-
-          <div class="px-2">
-    <a href="https://colab.research.google.com/github/smartdanny/budr_blog/blob/master/_notebooks/2020-10-07-Ubuntu_update_gpu_issue.ipynb" target="_blank">
-        <img class="notebook-badge-image" src="/budr_blog/assets/badges/colab.svg" alt="Open In Colab"/>
-    </a>
-</div>
-        </div>
       </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <!--
+    <ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#TOOLS:">TOOLS: </a></li>
+<li class="toc-entry toc-h2"><a href="#How-to-upgrade-from-ubuntu-terminal:">How to upgrade from ubuntu terminal: </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#This-is-where-things-got-bad-:(">This is where things got bad :( </a></li>
+<li class="toc-entry toc-h3"><a href="#Fix">Fix </a></li>
+</ul>
+</li>
+</ul><!--
 #################################################
 ### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
 #################################################
@@ -117,31 +121,39 @@ window.onload = wrap_img;
 
 <div class="container" id="notebook-container">
         
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>So I just updated my (very) remote server from ubuntu 18 to 20 and the process went fairly smooth (except for Nvidia GPU stuff).</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>When I say "very" remote, my server is in Miami, USA. But I am currently studying in Israel lol :)</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>I wanted to document some of my issues/useful tools here:</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="TOOLS:">TOOLS:<a class="anchor-link" href="#TOOLS:"> </a></h2><ul>
-<li><code>tmux</code><ul>
+<h2 id="TOOLS:">
+<a class="anchor" href="#TOOLS:" aria-hidden="true"><span class="octicon octicon-link"></span></a>TOOLS:<a class="anchor-link" href="#TOOLS:"> </a>
+</h2>
+<ul>
+<li>
+<code>tmux</code><ul>
 <li><a href="https://github.com/tmux/tmux/wiki">https://github.com/tmux/tmux/wiki</a></li>
 <li>I strongly reccomend Oh My Tmux! config found here: <a href="https://github.com/gpakosz/.tmux">https://github.com/gpakosz/.tmux</a><ul>
 <li>ctrl+b + m to switch to mouse mode (you'll thank me later)</li>
@@ -157,25 +169,36 @@ window.onload = wrap_img;
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="How-to-upgrade-from-ubuntu-terminal:">How to upgrade from ubuntu terminal:<a class="anchor-link" href="#How-to-upgrade-from-ubuntu-terminal:"> </a></h2><ol>
-<li>First run <code>sudo apt-get update &amp;&amp; sudo apt-get upgrade</code></li>
+<h2 id="How-to-upgrade-from-ubuntu-terminal:">
+<a class="anchor" href="#How-to-upgrade-from-ubuntu-terminal:" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to upgrade from ubuntu terminal:<a class="anchor-link" href="#How-to-upgrade-from-ubuntu-terminal:"> </a>
+</h2>
+<ol>
+<li>First run <code>sudo apt-get update &amp;&amp; sudo apt-get upgrade</code>
+</li>
 <li>Run <code>do-release-upgrade</code><ul>
 <li>This is where you need to have <code>tmux</code> running on your remote machine. Ubuntu should warn you otherwise.</li>
 </ul>
 </li>
 <li>At some point, ubuntu will tell you that there is a local change to your <code>sshd</code> file, and the update wants to override it. This is the file responsible for your ssh configuration. The one you are using to ssh into your machine with. If this file is changed in a way that breaks your ssh connection (for example, if you have a custom port, it will be changed back to 22) and the file is sourced, I think your connection will be broken. Since your machine is remote, you will have no access. So, simply tell the prompt that you will keep the old version of your sshd.</li>
-<li>After everything is done installing, run <code>sudo reboot</code></li>
-<li>If everything installed okay, and you are able to ssh back in, you can check your OS version with <code>lsb_release -a</code></li>
+<li>After everything is done installing, run <code>sudo reboot</code>
+</li>
+<li>If everything installed okay, and you are able to ssh back in, you can check your OS version with <code>lsb_release -a</code>
+</li>
 </ol>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="This-is-where-things-got-bad-:(">This is where things got bad :(<a class="anchor-link" href="#This-is-where-things-got-bad-:("> </a></h3><ol>
+<h3 id="This-is-where-things-got-bad-:(">
+<a class="anchor" href="#This-is-where-things-got-bad-:(" aria-hidden="true"><span class="octicon octicon-link"></span></a>This is where things got bad :(<a class="anchor-link" href="#This-is-where-things-got-bad-:("> </a>
+</h3>
+<ol>
 <li>Check if your nvidia card is working with <code>nvidia-smi</code>. Mine did not. <ul>
 <li>My error: <code>NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Make sure that the latest NVIDIA driver is installed and running.</code>
 An internet search led me to this link: <a href="https://askubuntu.com/questions/927199/nvidia-smi-has-failed-because-it-couldnt-communicate-with-the-nvidia-driver-ma">https://askubuntu.com/questions/927199/nvidia-smi-has-failed-because-it-couldnt-communicate-with-the-nvidia-driver-ma</a> which told me to install <code>nvidia-cuda-toolkit</code>, and <code>prime-select query</code>. Seems a lot of other people were led to disable secureboot (which pissed me off because I dont think its possible to disable secureboot remotely as it is a firmware motherboard thing).</li>
@@ -183,17 +206,23 @@ An internet search led me to this link: <a href="https://askubuntu.com/questions
 </li>
 <li>But, I found this tool that you can use to check if you have secureboot enabled or not: <code>mokutil --sb-state</code>. Mine was already disabled.</li>
 </ol>
-<h3 id="Fix">Fix<a class="anchor-link" href="#Fix"> </a></h3><ol>
+<h3 id="Fix">
+<a class="anchor" href="#Fix" aria-hidden="true"><span class="octicon octicon-link"></span></a>Fix<a class="anchor-link" href="#Fix"> </a>
+</h3>
+<ol>
 <li>Turned out, I just had to install the latest driver :). So lets do that</li>
-<li><p>Run <code>ubuntu-drivers devices</code> to find which drivers you need. It will say "recommended" next to the one it recommends 
-<img src="/budr_blog/images/copied_from_nb/fastcore_imgs/2020-10-07-Ubuntu_update_gpu_issue/ubuntu-drivers-out.png" alt="" /></p>
+<li>
+<p>Run <code>ubuntu-drivers devices</code> to find which drivers you need. It will say "recommended" next to the one it recommends 
+<img src="/budr_blog/images/copied_from_nb/fastcore_imgs/2020-10-07-Ubuntu_update_gpu_issue/ubuntu-drivers-out.png" alt=""></p>
 </li>
-<li><p>Install the recommended driver like <code>sudo apt install nvidia-driver-450</code></p>
+<li>
+<p>Install the recommended driver like <code>sudo apt install nvidia-driver-450</code></p>
 </li>
-<li><p>Run <code>sudo reboot</code> and finally check your <code>nvidia-smi</code> output again :)</p>
+<li>
+<p>Run <code>sudo reboot</code> and finally check your <code>nvidia-smi</code> output again :) 
+<img src="/budr_blog/images/copied_from_nb/fastcore_imgs/2020-10-07-Ubuntu_update_gpu_issue/nvidia-smi-out.png" alt=""></p>
 </li>
 </ol>
-<p><img src="/budr_blog/images/copied_from_nb/fastcore_imgs/2020-10-07-Ubuntu_update_gpu_issue/nvidia-smi-out.png" alt="" /></p>
 
 </div>
 </div>
@@ -202,7 +231,15 @@ An internet search led me to this link: <a href="https://askubuntu.com/questions
 
 
 
-  </div><a class="u-url" href="/budr_blog/2020/10/07/Ubuntu_update_gpu_issue.html" hidden></a>
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="smartdanny/budr_blog"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/budr_blog/ubuntu/tmux/devops/remote/2020/10/07/Ubuntu_update_gpu_issue.html" hidden></a>
 </article>
       </div>
     </main><footer class="site-footer h-card">
